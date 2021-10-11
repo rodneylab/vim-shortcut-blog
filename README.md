@@ -20,8 +20,8 @@ Demo code for adding Vim Keyboard shortcuts for navigation on your dev blog site
 If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-git clone https://github.com/rodneylab/sveltekit-intersection-observer.git sveltekit-graphql-fetch
-cd sveltekit-graphql-fetch
+git clone https://github.com/rodneylab/vim-shortcut-blog.git vim-shortcut-blog
+cd vim-shortcut-blog
 pnpm install # or npm install
 pnpm run dev
 ```
@@ -33,4 +33,3 @@ pnpm run build
 ```
 
 > You can preview the built app with `pnpm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
-
