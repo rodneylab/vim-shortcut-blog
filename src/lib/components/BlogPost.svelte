@@ -2,6 +2,7 @@
   import readingTime from 'reading-time';
   import BannerImage from '$lib/components/BannerImage.svelte';
   import SEO from '$lib/components/SEO/index.svelte';
+  import VimKeyboardShortcuts from '$lib/components/VimKeyboardShortcuts.svelte';
 
   export let imageData;
   export let post;
@@ -68,6 +69,6 @@
   ogSquareImage={ogSquareImageObject}
   twitterImage={twitterImageObject}
 />
-
+<VimKeyboardShortcuts />
 <BannerImage {imageData} />
 <h1>{title}</h1>
