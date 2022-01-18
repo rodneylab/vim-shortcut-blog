@@ -20,7 +20,7 @@ Demo code for adding Vim Keyboard shortcuts for navigation on your dev blog site
 If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-git clone https://github.com/rodneylab/vim-shortcut-blog.git vim-shortcut-blog
+git clone https://github.com/rodneylab/vim-shortcut-blog.git
 cd vim-shortcut-blog
 pnpm install # or npm install
 pnpm run dev
