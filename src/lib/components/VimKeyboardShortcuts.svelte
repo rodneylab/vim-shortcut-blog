@@ -1,25 +1,13 @@
 <script>
-  import { onDestroy, onMount } from 'svelte';
-  import { browser } from '$app/env';
-
-  onMount(() => {
-    if (browser) {
-      document.addEventListener('keydown', handleKeyDown);
-    }
-  });
-
-  onDestroy(() => {
-    if (browser) {
-      document.removeEventListener('keydown', handleKeyDown);
-    }
-  });
-
   let gAlreadyPressed = false;
 
   function viewportHeight() {
     return window.innerHeight;
   }
 
+  /**
+   * @param event {KeyboardEvent} - click
+   */
   function handleKeyDown(event) {
     const { ctrlKey, key } = event;
     switch (key) {
@@ -51,3 +39,5 @@
     }
   }
 </script>
+
+<svelte:window on:keydown={handleKeyDown} />
