@@ -11,7 +11,7 @@
 
 # vim-shortcut-blog
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/rodneylab/vim-shortcut-blog)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/rodneylab/vim-shortcut-blog)
 
 Demo code for adding Vim Keyboard shortcuts for navigation on your dev blog site. The code accompanies the <a aria-label="Open Rodney Lab blog post on using uvu for Type script A P I testing" href="https://rodneylab.com/using-uvu-typescript-api-testing/">article on using Vim keyboard shortcuts on your blog</a>. If you have any questions, please drop a comment at the bottom of that page.
 
@@ -33,3 +33,5 @@ pnpm run build
 ```
 
 > You can preview the built app with `pnpm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+
+Feel free to jump into the [Rodney Lab matrix chat room](https://matrix.to/#/%23rodney:matrix.org).
