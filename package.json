@@ -60,5 +60,8 @@
   "bugs": {
     "url": "https://github.com/rodneylab/sveltekit-seo/issues"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "commitlint": "^17.0.2"
+  }
 }
