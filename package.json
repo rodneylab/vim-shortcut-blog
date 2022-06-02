@@ -1,6 +1,8 @@
 {
   "name": "vim-shortcut-blog",
   "version": "1.0.0",
+  "license": "BSD-3-Clause",
+  "description": "Use Vim keyboard shortcuts on you blog: how to make it easy for Vim users to jump around your Svelte blog site with a keyboard and no mouse!",
   "scripts": {
     "dev": "svelte-kit dev --port 3000",
     "build": "npm run generate:manifest && svelte-kit build",
@@ -55,10 +57,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rodneylab/sveltekit-seo"
+    "url": "https://github.com/rodneylab/vim-shortcut-blog"
   },
   "bugs": {
-    "url": "https://github.com/rodneylab/sveltekit-seo/issues"
+    "url": "https://github.com/rodneylab/vim-shortcut-blog/issues"
   },
   "type": "module",
   "dependencies": {
