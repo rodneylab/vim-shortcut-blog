@@ -6,7 +6,15 @@ const config = {
   define: {
     'process.env.VITE_BUILD_TIME': JSON.stringify(new Date().toISOString()),
   },
-  plugins: [sveltekit(), imagetools({ force: true })],
+  plugins: [sveltekit(), imagetools()],
+  server: {
+    port: 5173,
+    strictPort: false,
+  },
+  preview: {
+    port: 4173,
+    strictPort: false,
+  },
 };
 
 export default config;
