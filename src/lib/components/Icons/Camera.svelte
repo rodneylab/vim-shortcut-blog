@@ -1,5 +1,6 @@
 <script>
-  import Icon, { addCollection } from '@iconify/svelte/dist/OfflineIcon.svelte';
+  import 'iconify-icon';
+  import { addCollection } from 'iconify-icon';
 
   export let label = 'Camera icon';
   export let colour = 'inherit';
@@ -20,4 +21,12 @@
   // https://api.iconify.design/simple-line-icons.json?icons=camera
 </script>
 
-<Icon icon="simple-line-icons:camera" {ariaHidden} aria-label={label} color={colour} {width} />
+<iconify-icon
+  style:color={colour}
+  role="img"
+  icon="simple-line-icons:camera"
+  {ariaHidden}
+  aria-label={label}
+  color={colour}
+  {width}
+/>

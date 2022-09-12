@@ -1,5 +1,6 @@
 <script>
-  import Icon, { addCollection } from '@iconify/svelte/dist/OfflineIcon.svelte';
+  import 'iconify-icon';
+  import { addCollection } from 'iconify-icon';
 
   export let label = 'Wire app icon';
   export let colour = 'inherit';
@@ -20,4 +21,12 @@
   // https://api.iconify.design/simple-icons.json?icons=wire
 </script>
 
-<Icon icon="simple-icons:wire" {ariaHidden} aria-label={label} color={colour} {width} />
+<iconify-icon
+  style:color={colour}
+  role="img"
+  icon="simple-icons:wire"
+  {ariaHidden}
+  aria-label={label}
+  color={colour}
+  {width}
+/>

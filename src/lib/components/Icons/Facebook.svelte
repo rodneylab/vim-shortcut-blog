@@ -1,10 +1,11 @@
-<script>
-  import Icon, { addCollection } from '@iconify/svelte/dist/OfflineIcon.svelte';
+<script lang="ts">
+  import 'iconify-icon';
+  import { addCollection } from 'iconify-icon';
 
-  export let label = 'Facebook icon';
-  export let colour = 'inherit';
-  export let ariaHidden = false;
-  export let width = 24;
+  export let label: string = 'Facebook icon';
+  export let colour: string = 'inherit';
+  export let ariaHidden: boolean = false;
+  export let width: number = 16;
 
   addCollection({
     prefix: 'simple-icons',
@@ -20,4 +21,11 @@
   // https://api.iconify.design/simple-icons.json?icons=facebook
 </script>
 
-<Icon icon="simple-icons:facebook" {ariaHidden} aria-label={label} color={colour} {width} />
+<iconify-icon
+  style:color={colour}
+  aria-label={label}
+  {ariaHidden}
+  icon="simple-icons:facebook"
+  {width}
+  role="img"
+/>
