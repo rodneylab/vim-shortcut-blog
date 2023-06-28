@@ -25,7 +25,6 @@
 	};
 
 	const handleMouseDown = async () => {
-		await prefetch(`/${slug}`);
 		goto(`/${slug}`);
 	};
 
@@ -39,6 +38,7 @@
 	on:mouseenter={handleMouseEnter}
 	on:mouseleave={handleMouseLeave}
 	on:mousedown={handleMouseDown}
+	role="presentation"
 >
 	<div class="content" data-sveltekit-preload-data="hover">
 		<h3>
