@@ -28,7 +28,13 @@ async function generateImageMeta(source) {
 	const { format, width, height } = metadataResult;
 	const { r, g, b } = dominantColourObject;
 	const dominantColourValue = `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
-	return { dominantColour: dominantColourValue, placeholder, format, width, height };
+	return {
+		dominantColour: dominantColourValue,
+		placeholder,
+		format,
+		width,
+		height,
+	};
 }
 
 function getPosts(location) {
@@ -86,9 +92,9 @@ const main = async () => {
 				(formatsElement) =>
 					`import srcset${formatsElement} from '${source}?w=${
 						width < outputSizes[0] ? `${width};` : ''
-					}${outputSizes.filter((outputSizesElement) => outputSizesElement <= width).join(';')}&${
-						formatsElement === 'auto' ? format : formatsElement
-					}&srcset';`,
+					}${outputSizes
+						.filter((outputSizesElement) => outputSizesElement <= width)
+						.join(';')}&format=${formatsElement === 'auto' ? format : formatsElement}&as=srcset';`,
 			);
 			const sources = `[\n${formats
 				.map(
@@ -98,7 +104,10 @@ const main = async () => {
 						} },`,
 				)
 				.join('\n')}\n  ]`;
-			const result = `import meta from '${source}?width=${Math.min(maxWidth, width)}&metadata';
+			const result = `import meta from '${source}?w=${Math.min(
+				maxWidth,
+				width,
+			)}&as=meta:height;src;width';
 ${srcsetImportArray.join('\n')}
 import ogImage from '${ogImageSource}';
 import ogSquareImage from '${ogSquareImageSource}';
