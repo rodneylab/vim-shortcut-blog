@@ -10,6 +10,7 @@
 	 */
 	function handleKeyDown(event) {
 		const { ctrlKey, key } = event;
+		let lastElement;
 		switch (key) {
 			case 'd':
 				if (ctrlKey) {
@@ -17,7 +18,7 @@
 				}
 				break;
 			case 'G':
-				const lastElement = document.getElementsByTagName('main')[0].lastElementChild;
+				lastElement = document.getElementsByTagName('main')[0].lastElementChild;
 				lastElement.scrollIntoView(true);
 				break;
 			case 'g':
@@ -35,6 +36,7 @@
 				if (ctrlKey) {
 					window.scrollBy(0, -0.5 * viewportHeight());
 				}
+				break;
 			default:
 		}
 	}
