@@ -1,5 +1,5 @@
 <script>
-	let { children, rel = '', target = '', href, ariaLabel } = $props();
+	let { children, rel = '', target = '', href, arialabel } = $props();
 </script>
 
-<a aria-label={ariaLabel} {href} {rel} {target}> {@render children?.()}</a>
+<a aria-label={arialabel} {href} {rel} {target}> {@render children?.()}</a>
